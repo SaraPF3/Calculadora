@@ -17,5 +17,5 @@
     <string name="div">/</string>
     <string name="igual">=</string>
     <string name="clear">CLEAR</string>
-    <string name="resultado">" result"</string>
+    <string name="resultado">"0"</string>
 </resources>
