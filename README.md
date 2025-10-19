@@ -1,6 +1,8 @@
 # Calculadora
 
-> Hecho por Sara Pérez Fernández
+Hecho por Sara Pérez
+
+> El link del repositorio es: <https://github.com/SaraPF3/Calculadora.git>
 
 Este proyecto consiste en el diseño de la interfaz de una calculadora.
 
@@ -9,3 +11,249 @@ El diseño es el siguiente:
 <p align="center">
 <img src="fotos/diseñoCalculadora.png" alt="Screenshot" width = "320">
 </p>
+
+El código XML del diseño es:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btIgual"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/igual"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:cornerRadius="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/btNum9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btNum9"
+        app:layout_constraintTop_toBottomOf="@+id/btNum9" />
+
+    <Button
+        android:id="@+id/btNum0"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/num0"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@+id/btPunto"
+        app:layout_constraintTop_toBottomOf="@+id/btNum8" />
+
+    <Button
+        android:id="@+id/btPunto"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/punto"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/btNum7"
+        app:layout_constraintStart_toStartOf="@+id/btNum7"
+        app:layout_constraintTop_toBottomOf="@+id/btNum7" />
+
+    <Button
+        android:id="@+id/btMultip"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/multip"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btNum9"
+        app:layout_constraintEnd_toEndOf="@+id/btResta"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btResta"
+        app:layout_constraintTop_toBottomOf="@+id/btResta" />
+
+    <Button
+        android:id="@+id/btDiv"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/div"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btNum0"
+        app:layout_constraintEnd_toEndOf="@+id/btMultip"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btMultip"
+        app:layout_constraintTop_toBottomOf="@+id/btMultip" />
+
+    <Button
+        android:id="@+id/btClear"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/clear"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:textScaleX="0.8"
+        android:textSize="12sp"
+        app:cornerRadius="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btIgual"
+        app:layout_constraintEnd_toEndOf="@+id/btDiv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btDiv"
+        app:layout_constraintTop_toBottomOf="@+id/btDiv" />
+
+    <Button
+        android:id="@+id/btNum7"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/num7"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/btNum4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btNum4"
+        app:layout_constraintTop_toBottomOf="@+id/btNum4" />
+
+    <Button
+        android:id="@+id/btNum9"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/num9"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@+id/btNum8"
+        app:layout_constraintTop_toBottomOf="@+id/btNum6" />
+
+    <Button
+        android:id="@+id/btNum8"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/num8"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@+id/btNum7"
+        app:layout_constraintTop_toBottomOf="@+id/btNum5" />
+
+    <Button
+        android:id="@+id/btNum5"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/num5"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@+id/btNum4"
+        app:layout_constraintTop_toBottomOf="@+id/btNum2" />
+
+    <Button
+        android:id="@+id/btNum4"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/num4"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/btNum1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btNum1"
+        app:layout_constraintTop_toBottomOf="@+id/btNum1" />
+
+    <Button
+        android:id="@+id/btNum6"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/num6"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@+id/btNum5"
+        app:layout_constraintTop_toBottomOf="@+id/btNum3" />
+
+    <Button
+        android:id="@+id/btSuma"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="@string/suma"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btNum3"
+        app:layout_constraintEnd_toEndOf="@+id/txtnResultado"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btNum3"
+        app:layout_constraintTop_toTopOf="@+id/btNum3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btResta"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/resta"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btNum6"
+        app:layout_constraintEnd_toEndOf="@+id/btSuma"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btSuma"
+        app:layout_constraintTop_toBottomOf="@+id/btSuma" />
+
+    <Button
+        android:id="@+id/btNum3"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/num3"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@+id/btNum2"
+        app:layout_constraintTop_toTopOf="@+id/btNum2" />
+
+    <Button
+        android:id="@+id/btNum2"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/num2"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@+id/btNum1"
+        app:layout_constraintTop_toTopOf="@+id/btNum1" />
+
+    <Button
+        android:id="@+id/btNum1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/num1"
+        android:textAlignment="center"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toStartOf="@+id/txtnResultado"
+        app:layout_constraintTop_toBottomOf="@+id/txtnResultado" />
+
+    <EditText
+        android:id="@+id/txtnResultado"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="168dp"
+        android:ems="10"
+        android:hint="@string/resultado"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+````
