@@ -256,4 +256,28 @@ El código XML del diseño es:
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-````
+```
+Los valores de los elementos son:
+```xml
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="num1">1</string>
+    <string name="num2">2</string>
+    <string name="num3">3</string>
+    <string name="num4">4</string>
+    <string name="num5">5</string>
+    <string name="num6">6</string>
+    <string name="num7">7</string>
+    <string name="num8">8</string>
+    <string name="num9">9</string>
+    <string name="punto">.</string>
+    <string name="num0">0</string>
+    <string name="suma">+</string>
+    <string name="resta">-</string>
+    <string name="multip">*</string>
+    <string name="div">/</string>
+    <string name="igual">=</string>
+    <string name="clear">CLEAR</string>
+    <string name="resultado">"0"</string>
+</resources>
+```
